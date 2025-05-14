@@ -5,7 +5,7 @@ function M.setup(opts)
 	M.opts = opts or {}
 end
 
-vim.api.nvim_create_user_command("JSM", function()
+vim.api.nvim_create_user_command("JSF", function()
 	local bufnr = vim.api.nvim_get_current_buf()
 	local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
 	local input = table.concat(lines, "\n")
