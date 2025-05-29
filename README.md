@@ -1,4 +1,3 @@
-```markdown
 # Str-Man: Neovim String Manipulation Plugin
 
 Str-Man is a Neovim plugin designed to provide a collection of string manipulation commands for your workflow. The plugin is modular and can be easily extended to support new string operations.
@@ -9,37 +8,31 @@ Str-Man is a Neovim plugin designed to provide a collection of string manipulati
 - Easily extensible for new string operations
 - Written in pure Lua for Neovim
 
-## Example Command
+## Example Commands
 
-### `:JSF`
+### `:SentenceCase`
 
-Formats the current buffer as pretty-printed JSON using [`jq`](https://stedolan.github.io/jq/).
+Converts the entire buffer to sentence case.
 
 **Usage:**
+
+```vim
+:SentenceCase
 ```
 
-:JSF
+This will replace the contents of the current buffer with the sentence-cased output.
 
-````
-This will replace the contents of the current buffer with the formatted JSON output.
+### `:TitleCase`
 
-## Installation
+Converts the entire buffer to title case.
 
-With [lazy.nvim](https://github.com/folke/lazy.nvim):
+**Usage:**
 
-```lua
-{
-  "str-manipulator/str-man",
-  dir = vim.fn.expand("$HOME/str-manipulator"),
-  dev = true,
-  opts = {},
-}
-````
+```vim
+:TitleCase
+```
 
-## Requirements
-
-- [jq](https://stedolan.github.io/jq/) installed and available in your `$PATH`
-- Neovim 0.10 or newer
+This will replace the contents of the current buffer with the title-cased output.
 
 ## Extending
 
